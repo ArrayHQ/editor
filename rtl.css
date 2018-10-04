@@ -1,0 +1,219 @@
+/*
+Theme Name: editor
+
+Adding support for language written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+http://codex.wordpress.org/Right_to_Left_Language_Support
+*/
+
+/* --------------------------------------------------------------
+Typography
+-------------------------------------------------------------- */
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+blockquote {
+	padding-left: 10%;
+	padding-right: 0;
+}
+@media (max-width: 768px) {
+	blockquote {
+		padding-left: 14%;
+		padding-right: 0;
+	}
+}
+blockquote:before {
+	left: 0;
+	right: auto;
+}
+
+/* --------------------------------------------------------------
+Elements
+-------------------------------------------------------------- */
+ul, ol {
+	margin: 0 25px 5% 0;
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin: .6em 1.5em 0 0;
+}
+
+/* --------------------------------------------------------------
+Navigation
+-------------------------------------------------------------- */
+.main-navigation {
+	float: right;
+}
+.main-navigation ul {
+	margin: 0 0 2% 0;
+	padding-right: 0;
+}
+.post-navigation .nav-next, .post-navigation .nav-previous {
+	float: right;
+}
+.post-navigation .meta-nav {
+	float: right;
+}
+.post-navigation .nav-next {
+	float: left;
+	padding-left: 0;
+	padding-right: 5%;
+	text-align: left;
+}
+@media (max-width: 768px) {
+	.post-navigation .nav-next {
+		float: none;
+		padding-right: 0;
+		text-align: right;
+	}
+}
+.post-navigation .nav-next i {
+	margin-left: 0;
+	margin-right: 5px;
+}
+.post-navigation .nav-previous {
+	padding-left: 5%;
+	padding-right: 0;
+}
+@media (max-width: 768px) {
+	.post-navigation .nav-previous {
+		padding-left: 0;
+	}
+}
+.post-navigation .nav-previous i {
+	margin-left: 5px;
+	margin-right: 0;
+}
+.paging-navigation .nav-previous {
+	float: right;
+}
+.paging-navigation .nav-next {
+	float: left;
+}
+.toggle-bar {
+	left: auto;
+	right: 0;
+}
+.toggle-bar li {
+	margin-left: 15px;
+	margin-right: 0;
+}
+
+/* --------------------------------------------------------------
+Accessibility
+-------------------------------------------------------------- */
+.screen-reader-text:focus {
+	left: 5px;
+	right: auto;
+}
+
+/* --------------------------------------------------------------
+Alignments
+-------------------------------------------------------------- */
+.alignleft {
+	float: right;
+	margin: .5em 0 0 2em;
+}
+.alignright {
+	float: left;
+	margin: .5em 2em 0 0;
+}
+.pull-right {
+	float: left;
+	margin: 99% 5% 3% -5%;
+	text-align: left;
+}
+.pull-left {
+	float: right;
+	margin: 0 -5% 3% 5%;
+	text-align: right;
+}
+
+/* --------------------------------------------------------------
+Comments
+-------------------------------------------------------------- */
+.bypostauthor .comment-cite:after {
+	margin-left: 0;
+	margin-right: 1rem;
+}
+.comment-list .children {
+	margin: 4% 13% 0 0;
+}
+.comment-list .avatar {
+	margin-left: 5%;
+	margin-right: 0;
+}
+.comment-reply-title small a {
+	text-align: left;
+	margin-left: 0;
+	margin-right: 8px;
+}
+@media (max-width: 768px) {
+	.comment-form-author, .comment-form-email, .comment-form-url {
+		margin-left: 0;
+	}
+}
+
+/* --------------------------------------------------------------
+Media
+-------------------------------------------------------------- */
+.page-content img.wp-smiley, .entry-content img.wp-smiley, .comment-content
+.gallery dd, .gallery figcaption {
+	text-align: right;
+}
+.gallery-item {
+	padding-left: 5%;
+	padding-right: 0;
+}
+
+/* --------------------------------------------------------------
+Header
+-------------------------------------------------------------- */
+@media (max-width: 768px) {
+	.site-header {
+		margin-right: 0;
+	}
+}
+
+/* --------------------------------------------------------------
+Footer
+-------------------------------------------------------------- */
+.site-footer {
+	padding: 0 26% 4% 6%;
+}
+
+/* --------------------------------------------------------------
+Content
+-------------------------------------------------------------- */
+.site-content {
+	padding: 5% 26% 4% 6%;
+}
+.format-quote .entry-title {
+	padding-left: 18%;
+	padding-right: 0;
+}
+.format-quote .entry-title:before {
+	left: 0;
+	right: auto;
+}
+.entry-meta {
+	margin-left: 5%;
+	margin-right: 0;
+}
+.meta-list li {
+	padding: 0 25px 12px 0;
+}
+.meta-list li:before {
+	left: auto;
+	right: 0;
+}
+.meta-list i {
+	margin-left: 5px;
+	margin-right: 0;
+}
+.author-avatar {
+	margin-left: 2%;
+	margin-right: 0;
+}
